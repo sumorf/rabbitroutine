@@ -42,7 +42,7 @@ type Connector struct {
 // NewConnector return a new instance of Connector.
 func NewConnector(cfg Config) *Connector {
 	if cfg.ReconnectAttempts == 0 {
-		cfg.ReconnectAttempts = math.MaxInt64
+		cfg.ReconnectAttempts = math.MaxUint32
 	}
 
 	return &Connector{
